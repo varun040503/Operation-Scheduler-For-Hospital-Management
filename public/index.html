@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Admin Login Section -->
+  <div class="container" id="admin-login">
+    <h2>Admin Login</h2>
+    <input type="text" id="admin-username" placeholder="Username">
+    <input type="password" id="admin-password" placeholder="Password">
+    <button onclick="adminLogin()">Login</button>
+  </div>
+
+  <!-- Manage Doctors Section -->
+  <div class="container hidden" id="manage-doctors">
+    <h2>Manage Doctors</h2>
+    <button onclick="showAddDoctorForm()">Add Doctor</button>
+    <div id="doctor-list"></div>
+    <div id="add-doctor-form" class="hidden">
+      <input type="text" id="doctor-name" placeholder="Doctor's Name">
+      <input type="text" id="doctor-specialization" placeholder="Specialization">
+      <input type="text" id="doctor-contact" placeholder="Contact Information">
+      <button onclick="addDoctor()">Save</button>
+    </div>
+  </div>
+
+  <!-- Manage Patients Section -->
+  <div class="container hidden" id="manage-patients">
+    <h2>Manage Patients</h2>
+    <button onclick="showAddPatientForm()">Add Patient</button>
+    <div id="patient-list"></div>
+    <div id="add-patient-form" class="hidden">
+      <input type="text" id="patient-name" placeholder="Patient's Name">
+      <input type="text" id="patient-id" placeholder="Patient ID">
+      <input type="text" id="patient-history" placeholder="Medical History">
+      <button onclick="addPatient()">Save</button>
+    </div>
+  </div>
+
+  <!-- Schedule Operations Section -->
+  <div class="container hidden" id="schedule-operations">
+    <h2>Schedule Operations</h2>
+    <!-- Operation scheduling interface -->
+  </div>
+
+  <!-- JavaScript -->
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
